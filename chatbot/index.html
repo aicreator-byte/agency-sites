@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jasa Pembuatan Chatbot WhatsApp &amp; Website · AI Digital Agency</title>
+<meta name="description" content="Jasa pembuatan chatbot untuk bisnis Indonesia: menjawab harga, FAQ, dan booking otomatis 24/7. Mulai Rp3,9 jt + Rp199 rb/bln.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --ink:#0e1526; --paper:#f5f6f8; --blue:#1e40ff; --coral:#ff5c38;
+ --line:#dde1e8; --mut:#5a6478; --teal:#0e7c6b;
+ --ease:cubic-bezier(.16,1,.3,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.disp{font-family:"Space Grotesk",sans-serif}
+section{padding:88px 0}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(245,246,248,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.02em}
+.logo i{font-style:normal;color:var(--blue)}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:.9rem}
+.nav-links a{padding:4px 0;border-bottom:2px solid transparent;transition:border-color .25s}
+.nav-links a:hover{border-color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;padding:13px 26px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(255,92,56,.35)}
+.btn.blue{background:var(--blue)}
+.btn.blue:hover{box-shadow:0 14px 28px rgba(30,64,255,.35)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.burger{display:none;font-size:1.5rem;background:none;border:0;cursor:pointer}
+/* hero */
+.hero{padding:52px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+.hero h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(2.5rem,5.2vw,4.1rem);line-height:1.04;letter-spacing:-.03em;margin:0 0 18px}
+.hero h1 .it{font-style:italic;font-weight:500;color:var(--blue)}
+.hero p.sub{font-size:1.1rem;color:var(--mut);line-height:1.7;max-width:32rem}
+.hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero-meta{margin-top:26px;font-size:.86rem;color:var(--mut)}
+.hero-meta b{color:var(--ink)}
+.hero-entrance{animation:heroIn 1s var(--ease) both}
+.hero-entrance.d1{animation-delay:.12s}.hero-entrance.d2{animation-delay:.24s}.hero-entrance.d3{animation-delay:.36s}
+@keyframes heroIn{from{opacity:0;transform:translateY(26px);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+/* hero visual: browser mockup + chatbot bubble */
+.mock{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px rgba(14,21,38,.16);transform:rotate(1.2deg)}
+.mock-bar{background:#0e1526;color:#fff;display:flex;align-items:center;gap:8px;padding:12px 16px;font-size:.78rem}
+.mock-bar .d{width:10px;height:10px;border-radius:50%}
+.mock-body{padding:26px;background:linear-gradient(180deg,#f2f8f5,#fff)}
+.mock-body h3{font-family:"Space Grotesk",sans-serif;font-size:1.5rem;line-height:1.15}
+.mock-body p{color:var(--mut);font-size:.88rem;margin-top:8px;line-height:1.6}
+.mock-tag{display:inline-block;background:#0e7c6b;color:#fff;font-size:.7rem;font-weight:700;padding:5px 11px;border-radius:999px;margin-top:14px}
+.chat-bubble{position:absolute;right:-8px;bottom:26px;max-width:230px;background:#fff;border:1px solid var(--line);border-radius:18px;border-bottom-right-radius:4px;padding:13px 15px;font-size:.83rem;line-height:1.55;box-shadow:0 18px 40px rgba(14,21,38,.16);animation:float 4.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.chat-bubble b{color:var(--teal)}
+.hero-visual{position:relative}
+/* strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;font-weight:600;font-size:.92rem;color:var(--mut)}
+.strip b{color:var(--ink)}
+/* section head */
+.kicker{font-size:.85rem;font-weight:700;letter-spacing:.08em;color:var(--blue)}
+h2.sec{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(1.9rem,3.8vw,2.8rem);letter-spacing:-.02em;line-height:1.12;margin:14px 0 12px}
+p.lead{color:var(--mut);line-height:1.7;max-width:36rem}
+/* layanan: 2 kartu berbeda bentuk */
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:38px}
+.svc{background:#fff;border:1px solid var(--line);padding:32px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .35s var(--ease),box-shadow .35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(14,21,38,.12)}
+.svc.a{border-radius:28px}
+.svc.b{border-radius:18px;background:var(--ink);color:#fff;border-color:var(--ink)}
+.svc .num{font-family:"Space Grotesk",sans-serif;font-size:2rem;opacity:.35}
+.svc h3{font-family:"Space Grotesk",sans-serif;font-size:1.5rem;margin:12px 0 8px;line-height:1.25}
+.svc p{color:var(--mut);font-size:.93rem;line-height:1.65}
+.svc.b p{color:#aab2c4}
+.svc ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.svc li{font-size:.9rem;padding-left:22px;position:relative}
+.svc li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.svc.b li::before{color:#7dd3fc}
+.svc .price{margin-top:22px;font-size:.88rem}
+.svc .price b{font-size:1.35rem}
+/* paket: toggle */
+.toggle{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px;margin-top:30px}
+.toggle button{border:0;background:transparent;padding:11px 24px;border-radius:999px;font-weight:700;font-size:.92rem;cursor:pointer;transition:all .3s;color:var(--mut)}
+.toggle button.on{background:var(--ink);color:#fff}
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.tier{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s,opacity .3s}
+.tier:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(14,21,38,.12)}
+.tier.hot{border:2px solid var(--ink);position:relative}
+.tier .flag{position:absolute;top:-13px;left:24px;background:var(--coral);color:#fff;font-size:.72rem;font-weight:800;padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+.tier h3{font-family:"Space Grotesk",sans-serif;font-size:1.2rem}
+.tier .tagline{color:var(--mut);font-size:.86rem;margin:6px 0 18px;line-height:1.5}
+.tier .harga{font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.02em}
+.tier .harga span{font-size:.85rem;font-weight:500;color:var(--mut);font-family:"Plus Jakarta Sans",sans-serif}
+.tier ul{list-style:none;margin:20px 0 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tier li{font-size:.89rem;padding-left:22px;position:relative;line-height:1.5}
+.tier li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.tier .btn{width:100%;justify-content:center}
+.pkg-note{margin-top:20px;font-size:.85rem;color:var(--mut);line-height:1.6;max-width:44rem}
+.pkg-note b{color:var(--ink)}
+/* portofolio */
+#portofolio{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;align-items:stretch}
+.case-visual{background:linear-gradient(140deg,#0e7c6b,#14b8a6);border-radius:26px;padding:34px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+.case-visual h3{font-family:"Space Grotesk",sans-serif;font-size:1.8rem;line-height:1.2}
+.case-visual p{opacity:.88;line-height:1.6;font-size:.93rem;margin-top:10px}
+.case-visual .mini{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:13px 15px;font-size:.85rem;line-height:1.55;margin-top:20px;backdrop-filter:blur(8px)}
+.case-body{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:34px}
+.case-body h4{font-family:"Space Grotesk",sans-serif;font-size:1.1rem;margin-bottom:14px}
+.case-body ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.case-body li{font-size:.92rem;line-height:1.6;padding-left:22px;position:relative}
+.case-body li::before{content:"→";position:absolute;left:0;color:var(--teal);font-weight:800}
+/* cara kerja: urutan nyata, penomoran bermakna */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;transition:transform .3s}
+.step:hover{transform:translateY(-5px)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:"Space Grotesk",sans-serif;font-size:2.2rem;font-weight:700;color:var(--blue);line-height:1}
+.step h3{margin:14px 0 8px;font-size:1.02rem}
+.step p{color:var(--mut);font-size:.88rem;line-height:1.6}
+/* faq */
+.faq{max-width:780px;margin:38px auto 0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden}
+.faq details[open]{box-shadow:0 14px 30px rgba(14,21,38,.08)}
+.faq summary{padding:20px 24px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--blue);font-size:1.4rem;line-height:1;transition:transform .3s;flex-shrink:0}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.faq details[open] .ans{grid-template-rows:1fr}
+.faq .ans>div{overflow:hidden}
+.faq .ans p{padding:0 24px 20px;color:var(--mut);line-height:1.7;font-size:.94rem}
+/* closing */
+.closing{background:var(--ink);color:#fff;border-radius:30px;padding:56px 40px;margin-top:44px;position:relative;overflow:hidden}
+.closing h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;max-width:22em}
+.closing p{color:#aab2c4;margin-top:12px;max-width:30rem;line-height:1.65}
+.closing .btn{margin-top:28px}
+/* footer */
+footer{background:#080d1a;color:#8a93a8;padding:44px 0 28px;font-size:.88rem;line-height:1.7}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff}
+footer a:hover{color:#fff}
+@media(max-width:900px){
+ .hero-grid,.duo,.case{grid-template-columns:1fr}
+ .tier-grid{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:var(--paper);flex-direction:column;padding:18px 22px;border-bottom:1px solid var(--line);gap:16px}
+ .nav-links.open{display:flex}
+ .burger{display:block}
+ section{padding:64px 0}
+ .chat-bubble{right:8px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ html{scroll-behavior:auto}
+}
+
+/* cross-sell popup */
+.xsell{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(8,13,26,.55);backdrop-filter:blur(6px);padding:20px}
+.xsell.show{display:flex}
+.xsell-card{background:#fff;border-radius:24px;max-width:440px;width:100%;padding:34px 30px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.3);animation:pop .45s cubic-bezier(.16,1,.3,1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.xsell-card h3{font-family:"Space Grotesk",sans-serif;font-size:1.35rem;margin-bottom:10px;line-height:1.3}
+.xsell-card p{color:var(--mut);font-size:.92rem;line-height:1.65;margin-bottom:20px}
+.xsell-card .row{display:flex;flex-direction:column;gap:10px}
+.xsell-card .row .btn{justify-content:center}
+.xsell-close{position:absolute;top:10px;right:16px;background:none;border:0;font-size:1.4rem;cursor:pointer;color:var(--mut)}
+
+
+/* fix hero kanan: bubble tidak lagi menutupi teks */
+.mock-body{padding-bottom:132px}
+.chat-bubble{right:18px;bottom:22px}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#">AI<i>Digital</i> Agency</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#layanan">Layanan</a><a href="#paket">Paket</a><a href="#portofolio">Portofolio</a><a href="#cara">Cara Kerja</a><a href="#faq">FAQ</a>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a class="btn" href="https://wa.me/628811722942" target="_blank" rel="noopener">Konsultasi Gratis</a>
+    <button class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1 class="hero-entrance">Chatbot yang <span class="it">menjawab,</span><br>siang dan malam.</h1>
+    <p class="sub hero-entrance d1">Chatbot WhatsApp dan website untuk bisnis Indonesia. Menjawab harga, FAQ, dan mengantar pelanggan ke booking, 24 jam tanpa henti.</p>
+    <div class="hero-cta hero-entrance d2">
+      <a class="btn" href="https://wa.me/628811722942" target="_blank" rel="noopener">Konsultasi Gratis: Ceritakan Bisnis Anda</a>
+      <a class="btn ghost" href="#paket">Lihat Paket</a>
+    </div>
+    <p class="hero-meta hero-entrance d3"><b>3 paket · mulai Rp3,9 jt + Rp199 rb/bln.</b></p>
+  </div>
+  <div class="hero-visual hero-entrance d1">
+    <div class="mock">
+      <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span style="margin-left:8px;opacity:.75">klinik-nkhealth-demo.pages.dev</span></div>
+      <div class="mock-body">
+        <span class="mock-tag">Klinik Gigi · Jakarta Barat</span>
+        <h3>Gigi sehat,<br>senyum yang bikin percaya diri.</h3>
+        <p>Website + chatbot demo untuk klinik gigi. Chatbot menjawab harga dan booking langsung, tanpa menunggu admin.</p>
+      </div>
+    </div>
+    <div class="chat-bubble"><b>Asisten Klinik:</b><br>Biaya tambal gigi mulai dari Rp400.000. Mau booking di cabang mana?</div>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">Kami membangun untuk <b>klinik</b> · <b>kuliner</b> · <b>jasa</b> · <b>toko &amp; distributor</b> · <b>UMKM lainnya</b>. Semua yang butuh pelanggan baru dari internet.</div></div>
+
+<section id="layanan"><div class="wrap">
+  <span class="kicker">Layanan kami</span>
+  <h2 class="sec">Satu produk:<br>asisten otomatis bisnis Anda.</h2>
+  <div class="duo">
+    <article class="svc b">
+      <div><span class="num">01</span><h3>Chatbot</h3><p>Asisten otomatis untuk bisnis Anda: menyapa pelanggan, menjawab harga dan FAQ, lalu mengantar mereka ke booking. Siang dan malam.</p>
+      <ul><li>Menjawab harga, FAQ, dan booking otomatis</li><li>Di website dan WhatsApp</li><li>Handoff ke admin saat butuh manusia</li><li>Hanya menjawab dari data bisnis Anda, tidak mengarang</li></ul></div>
+      <div class="price">Mulai dari <b>Rp3,9 jt</b> + Rp199 rb/bln</div>
+    </article>
+  </div>
+</div></section>
+
+<section id="paket"><div class="wrap">
+  <span class="kicker">Paket</span>
+  <h2 class="sec">Pilih tier yang<br>pas untuk bisnis Anda.</h2>
+  <p class="lead">Tiga tier chatbot, dari alur dasar sampai multi-cabang. Naik tier kapan saja.</p>
+  <div class="tier-grid" id="tierGrid"></div>
+  <p class="pkg-note">Retainer bulanan untuk platform chatbot, maintenance, dan pembaruan konten. <b>Biaya pesan WhatsApp (per-pesan, dari Meta) ditagih sesuai pemakaian.</b> Pembayaran via QRIS / transfer. Harga dapat berubah; konfirmasi saat konsultasi.</p>
+</div></section>
+
+<section id="portofolio"><div class="wrap">
+  <span class="kicker">Portofolio</span>
+  <h2 class="sec">Contoh nyata, bukan mockup kosong.</h2>
+  <div class="case">
+    <div class="case-visual">
+      <div><h3>NK Health: Klinik Gigi Jakarta Barat</h3><p>Website + chatbot demo untuk klinik gigi dengan 2 cabang, dibangun dari data publik klinik.</p></div>
+      <div class="mini"><b>Chatbot demo:</b> “Biaya tambal gigi mulai dari Rp400.000. Mau booking di cabang mana?” Chatbot menjawab harga langsung, lalu mengantar ke booking.</div>
+    </div>
+    <div class="case-body">
+      <h4>Yang dibangun</h4>
+      <ul>
+        <li>Website dengan cerita “Cemas → Ditemani → Tenang”: perjalanan pasien dari takut sampai senyum</li>
+        <li>7 layanan dengan harga transparan, termasuk tambal gigi mulai Rp400.000</li>
+        <li>Chatbot yang menjawab harga, FAQ, dan booking, lalu handoff ke WhatsApp admin dengan pesan yang sudah terisi</li>
+        <li>Tombol booking di setiap layanan, jam buka dengan highlight hari ini</li>
+      </ul>
+      <a class="btn blue" style="margin-top:24px" href="https://klinik-nkhealth-demo.pages.dev" target="_blank" rel="noopener">Lihat Demo Live</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="cara"><div class="wrap">
+  <span class="kicker">Cara kerja</span>
+  <h2 class="sec">Dari cerita Anda<br>ke website live.</h2>
+  <div class="steps">
+    <div class="step"><h3>Ceritakan bisnis Anda</h3><p>Konsultasi gratis via WhatsApp. Ceritakan layanan, harga, FAQ, dan alur booking Anda sekarang.</p></div><div class="step"><h3>Kami bangun</h3><p>Chatbot dibangun dari data bisnis Anda. Hanya menjawab dari yang Anda konfirmasi, tidak mengarang.</p></div><div class="step"><h3>Anda review</h3><p>Uji alur percakapannya, minta revisi sampai pas. Tidak launch sebelum Anda bilang ya.</p></div><div class="step"><h3>Launch & melayani</h3><p>Chatbot live 24/7. Menjawab, mengantar booking, dan menyerahkan ke admin Anda saat dibutuhkan.</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <span class="kicker">Tanya jawab</span>
+  <h2 class="sec">Sering ditanyakan.</h2>
+  <div class="faq">
+    <details><summary>Apakah chatbot bisa mengarang harga?</summary><div class="ans"><div><p>Tidak. Chatbot hanya menjawab dari data bisnis yang Anda konfirmasi. Yang tidak ada di datanya, diserahkan ke admin.</p></div></div></details><details><summary>Apakah butuh WhatsApp Business API?</summary><div class="ans"><div><p>Untuk chatbot di WhatsApp, ya. Kami bantu setup-nya. Biaya pesan WhatsApp (per-pesan, dari Meta) ditagih sesuai pemakaian.</p></div></div></details><details><summary>Berapa lama pengerjaannya?</summary><div class="ans"><div><p>Umumnya 7–14 hari tergantung tier. Estimasi pasti setelah konsultasi awal.</p></div></div></details><details><summary>Bagaimana pembayarannya?</summary><div class="ans"><div><p>Via QRIS / transfer. Biaya build di awal, retainer bulanan setelah chatbot live.</p></div></div></details><details><summary>Bisa ubah jawaban chatbot nanti?</summary><div class="ans"><div><p>Bisa. Pembaruan konten (harga baru, FAQ baru) termasuk dalam retainer.</p></div></div></details>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="closing">
+    <h2>Ceritakan bisnis Anda. Konsultasi gratis.</h2>
+    <p>Tidak ada kewajiban. Ceritakan saja bisnis Anda, kami tunjukkan seperti apa chatbot-nya sebelum Anda memutuskan.</p>
+    <a class="btn" href="https://wa.me/628811722942" target="_blank" rel="noopener">Chat via WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>AI Digital Agency</b><br>Chatbot untuk UMKM Indonesia.</div>
+  <div>Konsultasi: <a href="https://wa.me/628811722942" target="_blank" rel="noopener"><b>Hubungi Kami</b></a><br>Pembayaran via QRIS / transfer.</div>
+</div></footer>
+
+<script>
+const PKG=[{code:'B1',name:'Chatbot Dasar',tag:'Menyapa dan menjawab otomatis.',price:'Rp3,9 jt',per:'+ Rp199 rb/bln',feats:['Menjawab FAQ & daftar harga','Alur booking + handoff admin','1 nomor WhatsApp','2x revisi alur'],cta:'Pilih B1'},{code:'B2',name:'Chatbot Lengkap',tag:'Paket utama chatbot.',price:'Rp6,9 jt',per:'+ Rp349 rb/bln',hot:true,feats:['Semua isi Chatbot Dasar','Jawaban AI dari data bisnis Anda','Laporan chat bulanan','3x revisi alur'],cta:'Pilih B2'},{code:'B3',name:'Chatbot Multi-cabang',tag:'Untuk bisnis yang ramai.',price:'Rp11 jt',per:'+ Rp599 rb/bln',feats:['Semua isi Chatbot Lengkap','Multi-cabang & multi-admin','Integrasi sistem / kalender','Prioritas support'],cta:'Pilih B3'}];
+(function(){
+ const grid=document.getElementById('tierGrid');
+ grid.innerHTML=PKG.map(p=>'<article class="tier'+(p.hot?' hot':'')+'">'
+  +(p.hot?'<span class="flag">Paling dipilih</span>':'')
+  +'<h3>'+p.name+'</h3><p class="tagline">'+p.tag+'</p>'
+  +'<div class="harga">'+p.price+' <span>'+p.per+'</span></div>'
+  +'<ul>'+p.feats.map(f=>'<li>'+f+'</li>').join('')+'</ul>'
+  +'<a class="btn '+(p.hot?'':'ghost')+'" href="https://wa.me/628811722942?text='+encodeURIComponent('Halo, saya tertarik paket '+p.code+' ('+p.name+').')+'" target="_blank" rel="noopener">'+p.cta+'</a>'
+  +'</article>').join('');
+})();
+</script>
+<div class="xsell" id="xsell" role="dialog" aria-label="Penawaran">
+ <div class="xsell-card">
+  <button class="xsell-close" id="xsellClose" aria-label="Tutup">×</button>
+  <h3>Chatbot paling kuat di atas website sendiri</h3>
+  <p>Belum punya website? Atau mau sekalian paket lengkap: website yang dilayani chatbot 24/7?</p>
+  <div class="row">
+   <a class="btn" href="https://jasa-website-chatbot-di.pages.dev" target="_blank" rel="noopener">Lihat Paket Gabungan</a>
+   <a class="btn ghost" href="https://jasa-website-di.pages.dev" target="_blank" rel="noopener">Lihat Jasa Website</a>
+   <button class="btn ghost" id="xsellLater">Nanti saja</button>
+  </div>
+ </div>
+</div>
+<script>
+(function(){
+ var KEY='xsell_seen_v1', shown=false;
+ try{ var t=+localStorage.getItem(KEY)||0; if(Date.now()-t<7*864e5) return; }catch(e){}
+ function close(){ document.getElementById('xsell').classList.remove('show'); }
+ function show(){ if(shown) return; shown=true;
+  document.getElementById('xsell').classList.add('show');
+  try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){} }
+ document.getElementById('xsellClose').onclick=close;
+ document.getElementById('xsellLater').onclick=close;
+ document.getElementById('xsell').addEventListener('click',function(e){ if(e.target===this) close(); });
+ setTimeout(show, 30000);
+ document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) show(); });
+})();
+</script>
+</body>
+</html>
